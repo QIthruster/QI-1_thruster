@@ -56,6 +56,9 @@ def Read_ADC(Ch):
         control = ADC_Value[1]
     except:
         print('Error with reading ADC. The program will be terminated')
+        GPIO_OFF()
+        write_pot(0x00)
+        OpAmp_ES('OFF')
         exit()
 
     Voltage = 0.0
@@ -66,6 +69,9 @@ def Read_ADC(Ch):
             Voltage = ADC_Value[Ch] * REF / 0x7fffffff
     except:
         print('Error with reading ADC. The program will be terminated')
+        GPIO_OFF()
+        write_pot(0x00)
+        OpAmp_ES('OFF')
         exit()
 
     return Voltage

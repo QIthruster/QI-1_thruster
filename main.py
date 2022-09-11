@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Measurement parameters (program inputs)
 R_series = 1.5  # resistance in series with the QI capacitor in MOhms
-R_shunt = 25.0  # shunting resistor across the QI capacitor in MOhms
+R_shunt = 1.5  # shunting resistor across the QI capacitor in MOhms
 C = 0.01  # estimated QI capacitance in uF (micro Farads)
 factor_up = 5.0  # (factor_up * tau_up) is the waiting time for the capacitor full charge
 factor_down = 5.0  # (factor_down * tau_down) is the waiting time for the capacitor full discharge
